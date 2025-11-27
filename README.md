@@ -25,13 +25,7 @@ It also features a "Time Travel (Converter)" mode—simply input a time for any 
 - London (LHR)
 - New York (JFK)
 
-## How to Access (GitHub Pages)
-You can easily access this app from your phone or other devices via GitHub Pages.
+## Live Demo
+Access the app directly here:
+👉 **[https://ShoKaneshiro.github.io/time-zone-buddy/](https://ShoKaneshiro.github.io/time-zone-buddy/)**
 
-1. Go to the repository settings: [https://github.com/ShoKaneshiro/time-zone-buddy](https://github.com/ShoKaneshiro/time-zone-buddy)
-2. Click on the **Settings** tab.
-3. Select **Pages** from the left menu.
-4. Under **Build and deployment**, change the **Branch** from `None` to `main` and click **Save**.
-5. Wait a few minutes, and your live URL will appear at the top (e.g., `https://ShoKaneshiro.github.io/time-zone-buddy/`).
-
-Visit that URL to use the app anytime, anywhere!
