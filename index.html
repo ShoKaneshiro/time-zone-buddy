@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <span class="icon">✈️</span>
+                    <h1>Time Buddy</h1>
+                </div>
+                <button id="reset-btn" class="btn-live">
+                    <span class="status-dot"></span> Live
+                </button>
+            </div>
+            <p class="subtitle">Your Global Time Assistant</p>
+        </header>
+
+        <main id="city-list">
+            <!-- City cards will be injected here -->
+        </main>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

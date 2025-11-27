@@ -1,0 +1,292 @@
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent-color: #007AFF;
+    --accent-green: #34C759;
+    --border-radius: 16px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --font-main: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    /* Increased width for 2 columns */
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.logo .icon {
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+#city-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    /* 2 columns on desktop, 1 on mobile */
+    gap: 16px;
+}
+
+/* Boarding Pass Card Style */
+.city-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Left side (City Info) */
+.card-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px dashed #e0e0e0;
+    position: relative;
+}
+
+/* Notches for the "tear-off" effect */
+.card-left::before,
+.card-left::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+}
+
+.card-left::before {
+    top: -10px;
+}
+
+.card-left::after {
+    bottom: -10px;
+}
+
+.city-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.city-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.badge {
+    background-color: #eef2ff;
+    color: var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge.dst {
+    background-color: #fff1f2;
+    color: #e11d48;
+}
+
+/* Right side (Time Input) */
+.card-right {
+    width: 120px;
+    /* Slightly reduced width */
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    /* Increased size */
+    font-weight: 700;
+    color: var(--text-primary);
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 4px;
+    transition: background 0.2s;
+    /* Remove default browser clock icon */
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+/* Remove default time picker indicator in Chrome/Edge */
+.time-display::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.time-display:focus {
+    outline: 2px solid var(--accent-color);
+    background: white;
+}
+
+.date-display {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.date-display:focus {
+    outline: 2px solid var(--accent-color);
+    background: white;
+    color: var(--text-primary);
+}
+
+/* Remove calendar icon from date input to keep it clean, or keep it if preferred. 
+   Let's keep it minimal but accessible. */
+.date-display::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+/* Header Button Styles */
+#reset-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    font-family: var(--font-main);
+}
+
+.btn-live {
+    background-color: rgba(52, 199, 89, 0.1);
+    color: var(--accent-green);
+    cursor: default;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+.btn-resume {
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-resume:hover {
+    background-color: #0066d6;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
