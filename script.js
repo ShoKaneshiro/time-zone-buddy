@@ -8,7 +8,9 @@ const cities = [
     { name: 'Dubai', zone: 'Asia/Dubai', code: 'DXB' },
     { name: 'Poland', zone: 'Europe/Warsaw', code: 'WAW' },
     { name: 'London', zone: 'Europe/London', code: 'LHR' },
-    { name: 'New York', zone: 'America/New_York', code: 'JFK' }
+    { name: 'New York', zone: 'America/New_York', code: 'JFK' },
+    { name: 'Chicago', zone: 'America/Chicago', code: 'ORD' },
+    { name: 'San Francisco', zone: 'America/Los_Angeles', code: 'SFO' }
 ];
 
 let isEditing = false;

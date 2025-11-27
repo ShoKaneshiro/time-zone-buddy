@@ -24,8 +24,9 @@ It also features a "Time Travel (Converter)" mode—simply input a time for any 
 - Poland (WAW)
 - London (LHR)
 - New York (JFK)
+- Chicago (ORD)
+- San Francisco (SFO)
 
 ## Live Demo
 Access the app directly here:
 👉 **[https://ShoKaneshiro.github.io/time-zone-buddy/](https://ShoKaneshiro.github.io/time-zone-buddy/)**
-
