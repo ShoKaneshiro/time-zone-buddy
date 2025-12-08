@@ -29,4 +29,4 @@ It also features a "Time Travel (Converter)" mode—simply input a time for any 
 
 ## Live Demo
 Access the app directly here:
-👉 **[https://ShoKaneshiro.github.io/time-zone-buddy/](https://ShoKaneshiro.github.io/time-zone-buddy/)**
+👉 **[https://10time-zone-buddy.com](https://10time-zone-buddy.com)**
