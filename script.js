@@ -6,10 +6,11 @@ const cities = [
     { name: 'Singapore', zone: 'Asia/Singapore', code: 'SIN' },
     { name: 'Bangalore', zone: 'Asia/Kolkata', code: 'BLR' },
     { name: 'Dubai', zone: 'Asia/Dubai', code: 'DXB' },
+    { name: 'Romania', zone: 'Europe/Bucharest', code: 'OTP' },  // ← 追加
     { name: 'Poland', zone: 'Europe/Warsaw', code: 'WAW' },
     { name: 'London', zone: 'Europe/London', code: 'LHR' },
     { name: 'New York', zone: 'America/New_York', code: 'JFK' },
-    { name: 'Chicago', zone: 'America/Chicago', code: 'ORD' },
+    // Chicago削除 { name: 'Chicago', zone: 'America/Chicago', code: 'ORD' },
     { name: 'San Francisco', zone: 'America/Los_Angeles', code: 'SFO' }
 ];
 
